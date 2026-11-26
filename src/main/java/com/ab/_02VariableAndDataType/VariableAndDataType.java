@@ -10,7 +10,8 @@ public class VariableAndDataType {
         char ch1 = ' ';
         int c = ch1;
         System.out.println(c);
-
+        int ch3 = 48;
+        System.out.println((char)ch3);
         //java automatically promote byte short , chart to int
 
         byte b1 = 1;
