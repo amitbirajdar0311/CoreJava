@@ -23,6 +23,10 @@ public class VariableAndDataType {
         by = (byte) ((byte)by*2);
         by*=2;
         System.out.println(by);
-    }
+
+        int a = 257;
+        byte ba = (byte)a;
+        System.out.println(ba);   // byte range is -127 to 128, so 257-256 = 1, so output is 1 and if int a = 129 then output is -127 because 129-256 = -127
+     }
 
 }
