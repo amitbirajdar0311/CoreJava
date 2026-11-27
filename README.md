@@ -7,6 +7,7 @@ Welcome to **CoreJava**, your comprehensive learning repository for mastering **
 This repository is organized into 12 progressive learning modules covering everything from basic programming concepts to advanced Java features:
 
 ```
+
 CoreJava/
 ├── 📖 Module 01: Flow Chart & Pseudocode
 ├── 📖 Module 02: Variables & Data Types

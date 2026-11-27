@@ -1,39 +1,67 @@
 package com.ab.Test;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
-public class Test {
-    public static boolean isPrime(int n){
-        // prime or not not
-        if(n<=1){
-            return false;
-        }
-        else if(n==2) {
-            return true;
-        }else if(n%2==0){
-            return  false;
-        }else{
 
-            for(int i=3;i<=Math.sqrt(n);i+=2){
-                if(n%i==0){
-                    return false;
-                }
+
+public class Test {
+    public static void linearSearch( int key,int[] arr){
+        for(int i=0;i<arr.length;i++){
+            if(arr[i] ==key){
+                System.out.println("Element found at index: "+i);
+                return;
             }
         }
+        System.out.println("Element not found");
+    }
 
-            return true;
+    public static void largeAndSammestNumber(int[] arr){
+        int large = Integer.MIN_VALUE;
+        int smallest = Integer.MAX_VALUE;
 
+        for (int j : arr) {
+            large = Math.max(large, j);
+            smallest = Math.min(smallest, j);
+        }
+        System.out.println("Largest element: "+large);
+        System.out.println("Smallest element: "+smallest);
+    }
+
+
+    public static void reverseArray(int[] arr) {
+       int start = 0;
+       int end = arr.length -1 ;
+
+       while(start<end){
+           int temp  = arr[start];
+           arr[start] = arr[end];
+           arr[end] = temp;
+           start++;
+           end--;
+       }
+    }
+
+    public static void subArray(int[] arr){
+        for(int i=0;i<arr.length;i++){
+            for(int j=i;j<arr.length;j++){
+                for(int k=i;k<=j;k++){
+                    System.out.print(arr[k]+" ");
+                }
+                System.out.println();
+            }
+        }
     }
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Enter a number to check if it is prime or not: ");
-        int num = sc.nextInt();
-        if(isPrime(num)){
-            System.out.println(num+" is a prime number");
-        } else {
-            System.out.println(num+" is not a prime number");
-        }
+        int[] arr = {1, 2, 3, 4, 5};
+//        int key = 5;
+//        linearSearch(key,arr);
+//        largeAndSammestNumber(arr);
 
-        sc.close();
+//        System.out.println(Arrays.toString(arr));
+//        reverseArray(arr);
+//        System.out.println(Arrays.toString(arr));
+
+        subArray(arr);
     }
 }
