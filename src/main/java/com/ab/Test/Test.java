@@ -54,13 +54,13 @@ public class Test {
     }
     public static void main(String[] args) {
         int[] arr = {1, 2, 3, 4, 5};
-//        int key = 5;
-//        linearSearch(key,arr);
-//        largeAndSammestNumber(arr);
+        int key = 5;
+        linearSearch(key,arr);
+        largeAndSammestNumber(arr);
 
-//        System.out.println(Arrays.toString(arr));
-//        reverseArray(arr);
-//        System.out.println(Arrays.toString(arr));
+        System.out.println(Arrays.toString(arr));
+        reverseArray(arr);
+        System.out.println(Arrays.toString(arr));
 
         subArray(arr);
     }
